@@ -34,7 +34,9 @@ document.onkeyup = function(event) {
 
 	if (guesses === 0) {
 		losses++;
-		guesses = 10;	
+		guesses = 10;
+		computerGuess = options[Math.floor(Math.random() * options.length)];
+		guessArray = [];	
 	}
 
 		// Allows me to monitor game in console
