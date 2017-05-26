@@ -9,13 +9,10 @@ var wins = 0;
 var losses = 0;
 var guesses = 10;
 //Lists guesses
-
 var guessArray = [];
 
 
-
 // Function to be triggered on key up
-
 document.onkeyup = function(event) {
 
 	//Determins which key was pressed
@@ -39,6 +36,7 @@ document.onkeyup = function(event) {
 		guessArray = [];	
 	}
 
+
 		// Allows me to monitor game in console
 		console.log("wins: " + wins);
 		console.log("losses: " + losses);
@@ -47,13 +45,13 @@ document.onkeyup = function(event) {
 
 
 	// Displays game results on HTML
+	// <p>Wins: <span id="wins"></span></p>
 	var updateWins = "<p>Wins: " + wins + "</p>";
-    var updateLosses = "<p>Losses: " + losses + "</p>";
-    var updateGuesses = "<p>Guesses left: " + guesses + "</p>";
-    var yourGuesses = "<p>Your guesses so far: " + guessArray + "</p>";
-
-    var gameDiv = document.getElementById('game');
-    gameDiv.innerHTML = updateWins + updateLosses + updateGuesses + yourGuesses;
+  var updateLosses = "<p>Losses: " + losses + "</p>";
+  var updateGuesses = "<p>Guesses left: " + guesses + "</p>";
+  var yourGuesses = "<p>Your guesses so far: " + guessArray + "</p>";
+  var gameDiv = document.getElementById('game');
+  gameDiv.innerHTML = updateWins + updateLosses + updateGuesses + yourGuesses;
 
 
 } //ends function
